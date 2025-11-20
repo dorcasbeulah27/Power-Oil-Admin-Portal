@@ -1,5 +1,5 @@
 {
-  "name": "PowerOilAdminPortal",
+  "name": "power-oil-admin-portal",
   "compatibility_date": "2025-11-09",
   "assets": {
     "directory": "./dist",
