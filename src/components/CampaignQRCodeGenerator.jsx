@@ -22,7 +22,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
       const frontendUrl =
         import.meta.env.VITE_FRONTEND_URL ||
         import.meta.env.VITE_APP_URL ||
-        "http://localhost:3000";
+        "https://power-oil-spinner.dorcasbeulah27.workers.dev/";
 
       // Create the URL that will be encoded in the QR code
       // This will redirect to the frontend campaign page
@@ -66,7 +66,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
     const frontendUrl =
       import.meta.env.VITE_FRONTEND_URL ||
       import.meta.env.VITE_APP_URL ||
-      "http://localhost:3000";
+      "https://power-oil-spinner.dorcasbeulah27.workers.dev/";
     const campaignUrl = `${frontendUrl}/${campaignId}`;
     navigator.clipboard.writeText(campaignUrl);
     toast.success("URL copied to clipboard");
@@ -146,7 +146,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
                 QR Code will redirect to:{" "}
                 {import.meta.env.VITE_FRONTEND_URL ||
                   import.meta.env.VITE_APP_URL ||
-                  "http://localhost:3000"}
+                  "https://power-oil-spinner.dorcasbeulah27.workers.dev/"}
                 /{campaignId}
               </p>
             </div>

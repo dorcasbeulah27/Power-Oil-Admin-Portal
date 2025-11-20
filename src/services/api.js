@@ -3,7 +3,7 @@ import axios from "axios";
 // Get API URL from environment variable
 // In Railway, set VITE_API_URL to your backend URL (e.g., https://backend-production-xxxx.up.railway.app/api)
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "https://poweroil-backend.onrender.com/api";
 
 // Log API URL in development to help debug
 if (import.meta.env.DEV) {
