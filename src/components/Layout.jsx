@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
           {/* Logo */}
           <div className="relative flex items-center justify-center px-6 py-6 border-b border-white/10">
             <img
-              src="/src/header-img.png"
+              src="/header-img.png"
               alt="Power Oil Admin"
               className="h-24 object-contain"
             />

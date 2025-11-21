@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { FaLock, FaUser } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
-import poweroilImage from "../poweroil.png";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -43,7 +42,7 @@ const LoginPage = () => {
           className="w-full h-full"
         >
           <img
-            src={poweroilImage}
+            src="/poweroil.png"
             alt="Power Oil Nigeria"
             className="w-full h-full object-cover"
           />
@@ -61,7 +60,7 @@ const LoginPage = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
             <div className="flex flex-col items-center justify-center mb-8">
               <img
-                src="/src/header-img.png"
+                src="/header-img.png"
                 alt="Power Oil Admin"
                 className="h-24 object-contain mx-auto"
               />
