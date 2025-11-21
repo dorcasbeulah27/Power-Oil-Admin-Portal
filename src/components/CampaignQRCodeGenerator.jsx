@@ -20,9 +20,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
       // Get frontend URL from environment or use default
       // This should point to your consumer-facing frontend app
       const frontendUrl =
-        import.meta.env.VITE_FRONTEND_URL ||
-        import.meta.env.VITE_APP_URL ||
-        "https://power-oil-spinner.dorcasbeulah27.workers.dev/";
+        process.env.VITE_SPINNER_API_URL || "http://localhost:3000";
 
       // Create the URL that will be encoded in the QR code
       // This will redirect to the frontend campaign page
@@ -64,9 +62,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
 
   const copyQRUrl = () => {
     const frontendUrl =
-      import.meta.env.VITE_FRONTEND_URL ||
-      import.meta.env.VITE_APP_URL ||
-      "https://power-oil-spinner.dorcasbeulah27.workers.dev/";
+      process.env.VITE_SPINNER_API_URL || "http://localhost:3000";
     const campaignUrl = `${frontendUrl}/${campaignId}`;
     navigator.clipboard.writeText(campaignUrl);
     toast.success("URL copied to clipboard");
@@ -119,9 +115,7 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
               <p className="mb-2">
                 Scan this QR code to access the consumer microsite
               </p>
-              <p className="text-xs text-gray-500">
-                Campaign ID: {campaignId}
-              </p>
+              <p className="text-xs text-gray-500">Campaign ID: {campaignId}</p>
             </div>
 
             <div className="flex gap-2">
@@ -144,10 +138,8 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
             <div className="text-xs text-gray-500 text-center">
               <p>
                 QR Code will redirect to:{" "}
-                {import.meta.env.VITE_FRONTEND_URL ||
-                  import.meta.env.VITE_APP_URL ||
-                  "https://power-oil-spinner.dorcasbeulah27.workers.dev/"}
-                /{campaignId}
+                {process.env.VITE_SPINNER_API_URL || "http://localhost:3000"}/
+                {campaignId}
               </p>
             </div>
           </div>
@@ -158,4 +150,3 @@ const CampaignQRCodeGenerator = ({ campaignId, campaignName, onClose }) => {
 };
 
 export default CampaignQRCodeGenerator;
-
